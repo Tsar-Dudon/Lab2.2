@@ -26,21 +26,21 @@ void QuickSort(int a, int b, int* mas)
 
 int main()
 {	
-    const int n = 100;
-    int mas[16] {45,14,45,13,7,1,7,89,4,743,1,65,823,2,7,0};
+    const int n = 100000;
+    int mas[n] {45,14,45,13,7,1,7,89,4,743,1,65,823,2,7,0};
 
-    /*for(int i = 0; i < 15; i++)
+    /* for(int i = 0; i < n - 1; i++)
     {
-        for(int j = i; j < 16; j++)
+        for(int j = i; j < n; j++)
         {
             if(mas[i] > mas[j])
                 std::swap(mas[i], mas[j]); 
         }
     }*/
 
-   QuickSort(0, 15, mas);
+   QuickSort(0, n - 1, mas);
 
-    for(int i = 0; i < 16; i++)
+    for(int i = 100000 - 16; i < n; i++)
         std::cout << mas[i] << ' ';
 
     return 0;
